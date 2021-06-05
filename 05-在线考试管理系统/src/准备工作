@@ -1,0 +1,19 @@
+任务：在线考试管理系统----用户信息管理模块
+
+子任务： 用户信息注册
+       用户信息查询
+       用户信息删除
+       用户信息更新
+准备工作：
+        1.创建用户信息表 Users.frm
+        create table Users(
+            userId int primary key auto_increment, #用户编号
+            userName varchar(50)     #用户名称
+            passWord varchar(50)     #用户密码
+            sex   char(1)           #用户性别  ‘男’或‘女’
+            email  varchar(50)      #用户邮箱
+        )
+
+        2.  在sec下entity包下创建com.entity.Users  实体类
+        3.  在src下util包下创建com.util.jdbcUtil   工具类（封装jdbc）
+        4.  在src下dao包下创建数据库操作类
