@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function xxx(){
+        var text1=document.getElementById("text1").value
+        var reg=/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/
+        var ok=reg.test(text1)
+        if (ok){
+            document.getElementById("error").innerText="邮箱格式正确"
+        }else{
+            document.getElementById("error").innerText="邮箱格式错误"
+        }
+    }
+    function xx(){
+        document.getElementById("error").innerText=""
+    }
+</script>
+<input type="text" id="text1" onfocus="xx()">
+<span id="error" style="color: red"></span>
+<input type="button" value="进行邮箱验证" id="button" onclick="xxx()">
+</body>
+</html>
